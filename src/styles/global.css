@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap");
+
+:root {
+  font-family: "DM Sans", "Apple SD Gothic Neo", sans-serif;
+  color: #1e2926;
+  background: #f7f8f4;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  --ink: #1e2926;
+  --muted: #858d88;
+  --line: #e9ece6;
+  --green: #a6dc66;
+  --green-dark: #457a3b;
+  --sidebar-width: 250px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 360px;
+  min-height: 100vh;
+  margin: 0;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  color: inherit;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+  outline: 2px solid #659b4a;
+  outline-offset: 3px;
+}
+
+.brand-mark {
+  display: grid;
+  width: 33px;
+  height: 33px;
+  place-items: center;
+  color: #294b35;
+  background: var(--green);
+  border-radius: 11px 11px 11px 4px;
+}
+
+.brand-period {
+  color: #83b84b;
+}
+
+.eyebrow-dot {
+  width: 6px;
+  height: 6px;
+  background: #a4d76a;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px #e9f2df;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  clip-path: inset(50%);
+}
+
+.toast {
+  position: fixed;
+  right: 25px;
+  bottom: 22px;
+  z-index: 8;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  max-width: min(500px, calc(100vw - 30px));
+  padding: 12px 14px;
+  color: #fff;
+  background: #293b30;
+  border-radius: 6px;
+  box-shadow: 0 8px 24px rgba(25, 43, 30, 0.18);
+  font-size: 11px;
+  animation: toast-in 0.2s ease-out;
+}
+
+.toast button {
+  display: grid;
+  width: 20px;
+  height: 20px;
+  place-items: center;
+  padding: 0;
+  color: #dae4da;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+@keyframes toast-in {
+  from {
+    opacity: 0;
+    transform: translateY(7px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 620px) {
+  body {
+    min-width: 360px;
+  }
+}
